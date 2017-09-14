@@ -25,6 +25,11 @@ if (!is_null($events['events'])) {
 				'text' => "มีอะไรให้ช่วยไหม"
 			];
 			$mes3 = "ทดสอบ";
+			if($text == "chuty") {
+				$mes3 = "chuty น่ารักที่สุดในโลก";
+			}else{
+				$mes3 = "นี่ไม่ใช่ chuty นี่นา";
+			}
 			$messages3 = [
 				'type' => 'text',
 				// if ($text == "chuty"){
@@ -34,16 +39,16 @@ if (!is_null($events['events'])) {
 				// }
 				'text' => $mes3
 			];
-			$messageimage [
-				'type' => 'sticker',
- 				'packageId' => '4',
- 				'stickerId' => '300'
-			];
+			// $messageimage [
+			// 	'type' => 'sticker',
+ 		// 		'packageId' => '4',
+ 		// 		'stickerId' => '300'
+			// ];
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
 				'replyToken' => $replyToken,
-				'messages' => [$messages,$messages2,$messages3,$messageimage],
+				'messages' => [$messages,$messages2,$messages3],
 			];
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
