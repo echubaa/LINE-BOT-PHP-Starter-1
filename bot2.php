@@ -34,6 +34,12 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
     $arrPostData['messages'][0]['type'] = "sticker";
     $arrPostData['messages'][0]['packageId'] = "1";
     $arrPostData['messages'][0]['stickerId'] = "1";
+}else if ($arrJson['events'][0]['message']['text'] == "ส่งรูปมาหน่อย") {
+    $arrPostData = array();
+    $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+    $arrPostData['messages'][0]['type'] = "image";
+    $arrPostData['messages'][0]['originalContentUrl'] = "http://data.whicdn.com/images/165000912/large.jpg";
+    $arrPostData['messages'][0]['previewImageUrl'] = "http://data.whicdn.com/images/165000912/large.jpg";
 }else{
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
