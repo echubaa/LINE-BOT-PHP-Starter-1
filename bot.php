@@ -27,13 +27,12 @@ if (!is_null($events['events'])) {
 			$mes3 = "ทดสอบ";
 			$messages3 = [
 				'type' => 'text',
-				if ($text == "chuty"){
-					$mes3 = "chuty น่ารักมากๆ";
-				}else{
-					$mes3 = "นี่ไม่ใช่ chuty นี่นา";
-				}
+				// if ($text == "chuty"){
+				// 	$mes3 = "chuty น่ารักมากๆ";
+				// }else{
+				// 	$mes3 = "นี่ไม่ใช่ chuty นี่นา";
+				// }
 				'text' => $mes3
-
 			];
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
