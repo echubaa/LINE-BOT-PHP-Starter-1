@@ -37,7 +37,7 @@ if (!is_null($events['events'])) {
 			$messageimage [
 				'type' => 'image',
 				'originalContentUrl'=> "https://img.buzzfeed.com/buzzfeed-static/static/2015-10/3/12/campaign_images/webdr05/pumpernickel-the-mini-pig-will-give-you-life-2-13650-1443890523-0_dblbig.jpg",
-				'previewImageUrl': "https://img.buzzfeed.com/buzzfeed-static/static/2015-10/3/12/campaign_images/webdr05/pumpernickel-the-mini-pig-will-give-you-life-2-13650-1443890523-0_dblbig.jpg"
+				'previewImageUrl' => "https://img.buzzfeed.com/buzzfeed-static/static/2015-10/3/12/campaign_images/webdr05/pumpernickel-the-mini-pig-will-give-you-life-2-13650-1443890523-0_dblbig.jpg"
 			]
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
