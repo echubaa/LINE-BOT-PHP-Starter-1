@@ -32,11 +32,6 @@ if (!is_null($events['events'])) {
 			}
 			$messages3 = [
 				'type' => 'text',
-				// if ($text == "chuty"){
-				// 	$mes3 = "chuty น่ารักมากๆ";
-				// }else{
-				// 	$mes3 = "นี่ไม่ใช่ chuty นี่นา";
-				// }
 				'text' => $mes3
 			];
 			// $messageimage [
