@@ -24,11 +24,19 @@ if (!is_null($events['events'])) {
 				'type' => 'text',
 				'text' => "มีอะไรให้ช่วยไหม"
 			];
+			$messages3 = [
+				'type' => 'text',
+				if ($text == "chuty"){
+					'text' => "chuty เป็นคนน่ารักมากๆ"
+				}else{
+					'text' => "นี่ไม่ใช่ chuty นี่นา"
+				}
+			];
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
 			$data = [
 				'replyToken' => $replyToken,
-				'messages' => [$messages,$messages2],
+				'messages' => [$messages,$messages2,$messages3],
 			];
 			$post = json_encode($data);
 			$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
