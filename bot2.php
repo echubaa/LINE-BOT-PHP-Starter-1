@@ -43,7 +43,7 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
 }else if ($arrJson['events'][0]['message']['text'] == "เป็นไง") {
     $arrPostData = array();
     $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-    $arrPostData['messages'][0]['type'] = "image";
+    $arrPostData['messages'][0]['type'] = "video";
     $arrPostData['messages'][0]['originalContentUrl'] = "https://www.reactiongifs.com/r/csd.gif";
     $arrPostData['messages'][0]['previewImageUrl'] = "https://www.reactiongifs.com/r/csd.gif";
 }else{
