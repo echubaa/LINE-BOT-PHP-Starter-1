@@ -16,11 +16,13 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
   $arrPostData['messages'][0]['text'] = "สวัสดี ID คุณคือ ".$arrJson['events'][0]['source']['userId'];
-}else if($arrJson['events'][0]['message']['text'] == "ชื่ออะไร"){
+}else if($arrJson['events'][0]['message']['text'] == "-web"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+  $arrPostData['messages'][1]['type'] = "text";
+  $arrPostData['messages'][1]['text'] = "https://www.futurepark.co.th/th/home/";
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "ฉันยังไม่มีชื่อนะ";
+  $arrPostData['messages'][0]['text'] = "ท่านสามารถค้นหารายละเอียดต่างๆได้ที่เว็บไชต์";
 }else if($arrJson['events'][0]['message']['text'] == "ทำอะไรได้บ้าง"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
@@ -60,7 +62,7 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
     $arrPostData = array();
     $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
     $arrPostData['messages'][0]['type'] = "text";
-    $arrPostData['messages'][0]['text'] = "คุณสามารถพิพม์คำสั่งดังต่อไปนี้ \n -events เพื่อค้นหาevents\n -floors แสดงแผนที่ชั้น \n -location แสดงที่ตั้ง \n ความช่วยเหลืออื่นๆ กรุณาติดต่อ 02-0000000";
+    $arrPostData['messages'][0]['text'] = "คุณสามารถพิพม์คำสั่งดังต่อไปนี้ \n -events เพื่อค้นหาevents\n -floors แสดงแผนที่ชั้น \n -location แสดงที่ตั้ง \n -web แสดงเว็บไซต์ \n ความช่วยเหลืออื่นๆ กรุณาติดต่อ 02-0000000";
 }else if ($arrJson['events'][0]['message']['text'] == "-events") {
     $arrPostData = array();
     $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
