@@ -20,9 +20,7 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "ท่านสามารถค้นหารายละเอียดต่างๆได้ที่เว็บไชต์";
-  $arrPostData['messages'][1]['type'] = "text";
-  $arrPostData['messages'][1]['text'] = "https://www.futurepark.co.th/th/home/";
+  $arrPostData['messages'][0]['text'] = "ท่านสามารถค้นหารายละเอียดต่างๆได้ที่เว็บไชต์ \n https://www.futurepark.co.th/th/home/";
 }else if($arrJson['events'][0]['message']['text'] == "ทำอะไรได้บ้าง"){
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
