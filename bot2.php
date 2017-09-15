@@ -60,7 +60,7 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
     $arrPostData = array();
     $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
     $arrPostData['messages'][0]['type'] = "text";
-    $arrPostData['messages'][0]['text'] = "คุณสามารถพิพม์คำสั่งดังต่อไปนี้ -events";
+    $arrPostData['messages'][0]['text'] = "คุณสามารถพิพม์คำสั่งดังต่อไปนี้ -events เพื่อค้นหาevents\n -stores เพื่อค้นหาร้านค้า \n ความช่วยเหลืออื่นๆ กรุณาติดต่อ 02-0000000";
 }else if ($arrJson['events'][0]['message']['text'] == "-events") {
     $arrPostData = array();
     $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
