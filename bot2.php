@@ -53,7 +53,7 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
     $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
     $arrPostData['messages'][0]['type'] = "location";
     $arrPostData['messages'][0]['title'] = "ฟิวเจอร์พาร์ค รังสิต";
-    $arrPostData['messages'][0]['address'] = "Future Park Rangsit, บริษัท รังสิต พลาซ่า จำกัด เลข ที่ 94 ศูนย์การค้า ฟิ ว เจอร์ พาร์ ค รังสิต, ถนน พหลโยธิน อำเภอ ธัญบุรี ปทุมธานี 12130";
+    $arrPostData['messages'][0]['address'] = "Future Park Rangsit";
     $arrPostData['messages'][0]['latitude'] = 13.988698000000012;
     $arrPostData['messages'][0]['longitude'] = 100.61764199999993;
 }else if ($arrJson['events'][0]['message']['text'] == "-help") {
@@ -86,7 +86,7 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
     $arrPostData['messages'][1]['originalContentUrl'] = "https://www.futurepark.co.th/stocks/floor_plan/FloorG.png";
     $arrPostData['messages'][1]['previewImageUrl'] = "https://www.futurepark.co.th/stocks/floor_plan/FloorG.png";
     $arrPostData['messages'][2]['type'] = "image";
-    $arrPostData['messages'][2]['originalContentUrl'] = "https://www.futurepark.co.th/th/shop?search=floor";
+    $arrPostData['messages'][2]['originalContentUrl'] = "https://www.futurepark.co.th/stocks/floor_plan/Floor1.png";
     $arrPostData['messages'][2]['previewImageUrl'] = "https://www.futurepark.co.th/stocks/floor_plan/Floor1.png";
 }else{
   $arrPostData = array();
