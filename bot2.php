@@ -43,9 +43,17 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
 }else if ($arrJson['events'][0]['message']['text'] == "เป็นไง") {
     $arrPostData = array();
     $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
-    $arrPostData['messages'][0]['type'] = "video";
+    $arrPostData['messages'][0]['type'] = "image";
     $arrPostData['messages'][0]['originalContentUrl'] = "https://www.reactiongifs.com/r/csd.gif";
     $arrPostData['messages'][0]['previewImageUrl'] = "https://www.reactiongifs.com/r/csd.gif";
+}else if ($arrJson['events'][0]['message']['text'] == "อยู่ไหน?") {
+    $arrPostData = array();
+    $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+    $arrPostData['messages'][0]['type'] = "location";
+    $arrPostData['messages'][0]['title'] = "my location";
+    $arrPostData['messages'][0]['address'] = "〒150-0002 東京都渋谷区渋谷２丁目２１−１";
+    $arrPostData['messages'][0]['latitude'] = 35.65910807942215;
+    $arrPostData['messages'][0]['longitude'] = 139.70372892916203;
 }else{
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
