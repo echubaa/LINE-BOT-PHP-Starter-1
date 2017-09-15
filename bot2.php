@@ -48,19 +48,19 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
     $arrPostData['messages'][0]['type'] = "image";
     $arrPostData['messages'][0]['originalContentUrl'] = "https://www.reactiongifs.com/r/csd.gif";
     $arrPostData['messages'][0]['previewImageUrl'] = "https://www.reactiongifs.com/r/csd.gif";
-}else if ($arrJson['events'][0]['message']['text'] == "อยู่ไหน?") {
+}else if ($arrJson['events'][0]['message']['text'] == "-location") {
     $arrPostData = array();
     $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
     $arrPostData['messages'][0]['type'] = "location";
-    $arrPostData['messages'][0]['title'] = "สยามพารากอน";
-    $arrPostData['messages'][0]['address'] = "991 สยามพารากอน ถนน พระราม 1 แขวง ปทุมวัน เขต ปทุมวัน กรุงเทพมหานคร 10330";
-    $arrPostData['messages'][0]['latitude'] = 13.7544858;
-    $arrPostData['messages'][0]['longitude'] = 100.5173398;
+    $arrPostData['messages'][0]['title'] = "ฟิวเจอร์พาร์ค รังสิต";
+    $arrPostData['messages'][0]['address'] = "Future Park Rangsit, บริษัท รังสิต พลาซ่า จำกัด เลข ที่ 94 ศูนย์การค้า ฟิ ว เจอร์ พาร์ ค รังสิต, ถนน พหลโยธิน อำเภอ ธัญบุรี ปทุมธานี 12130";
+    $arrPostData['messages'][0]['latitude'] = 13.988698000000012;
+    $arrPostData['messages'][0]['longitude'] = 100.61764199999993;
 }else if ($arrJson['events'][0]['message']['text'] == "-help") {
     $arrPostData = array();
     $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
     $arrPostData['messages'][0]['type'] = "text";
-    $arrPostData['messages'][0]['text'] = "คุณสามารถพิพม์คำสั่งดังต่อไปนี้ -events เพื่อค้นหาevents\n -stores เพื่อค้นหาร้านค้า \n ความช่วยเหลืออื่นๆ กรุณาติดต่อ 02-0000000";
+    $arrPostData['messages'][0]['text'] = "คุณสามารถพิพม์คำสั่งดังต่อไปนี้ \n -events เพื่อค้นหาevents\n -floors แสดงแผนที่ชั้น \n -location แสดงที่ตั้ง \n ความช่วยเหลืออื่นๆ กรุณาติดต่อ 02-0000000";
 }else if ($arrJson['events'][0]['message']['text'] == "-events") {
     $arrPostData = array();
     $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
@@ -76,6 +76,18 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
     $arrPostData['messages'][3]['type'] = "text";
     $arrPostData['messages'][3]['text'] = "แล้วมาเจอกันนะคะ ^^";
 
+}else if ($arrJson['events'][0]['message']['text'] == "-floors") {
+    $arrPostData = array();
+    $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+    $arrPostData['messages'][0]['type'] = "image";
+    $arrPostData['messages'][0]['originalContentUrl'] = "https://www.futurepark.co.th/stocks/floor_plan/FloorB.png";
+    $arrPostData['messages'][0]['previewImageUrl'] = "https://www.futurepark.co.th/stocks/floor_plan/FloorB.png";
+    $arrPostData['messages'][1]['type'] = "image";
+    $arrPostData['messages'][1]['originalContentUrl'] = "https://www.futurepark.co.th/stocks/floor_plan/FloorG.png";
+    $arrPostData['messages'][1]['previewImageUrl'] = "https://www.futurepark.co.th/stocks/floor_plan/FloorG.png";
+    $arrPostData['messages'][2]['type'] = "image";
+    $arrPostData['messages'][2]['originalContentUrl'] = "https://www.futurepark.co.th/th/shop?search=floor";
+    $arrPostData['messages'][2]['previewImageUrl'] = "https://www.futurepark.co.th/stocks/floor_plan/Floor1.png";
 }else{
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
