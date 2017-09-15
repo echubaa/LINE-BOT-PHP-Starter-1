@@ -56,11 +56,31 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
     $arrPostData['messages'][0]['address'] = "991 สยามพารากอน ถนน พระราม 1 แขวง ปทุมวัน เขต ปทุมวัน กรุงเทพมหานคร 10330";
     $arrPostData['messages'][0]['latitude'] = 13.7544858;
     $arrPostData['messages'][0]['longitude'] = 100.5173398;
+}else if ($arrJson['events'][0]['message']['text'] == "-help") {
+    $arrPostData = array();
+    $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+    $arrPostData['messages'][0]['type'] = "text";
+    $arrPostData['messages'][0]['text'] = "คุณสามารถพิพม์คำสั่งดังต่อไปนี้ -events";
+}else if ($arrJson['events'][0]['message']['text'] == "-events") {
+    $arrPostData = array();
+    $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
+    $arrPostData['messages'][0]['type'] = "image";
+    $arrPostData['messages'][0]['originalContentUrl'] = "https://www.futurepark.co.th/ckfinder/userfiles/images/event/AW%20POSTER%20%5BConverted%5D.jpg";
+    $arrPostData['messages'][0]['previewImageUrl'] = "https://www.futurepark.co.th/ckfinder/userfiles/images/event/AW%20POSTER%20%5BConverted%5D.jpg";
+    $arrPostData['messages'][1]['type'] = "image";
+    $arrPostData['messages'][1]['originalContentUrl'] = "https://www.futurepark.co.th/ckfinder/userfiles/images/event/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%88%E0%B8%B2%E0%B8%81%E0%B9%80%E0%B8%A5%E0%B8%B7%E0%B8%AD%E0%B8%94.png";
+    $arrPostData['messages'][1]['previewImageUrl'] = "https://www.futurepark.co.th/ckfinder/userfiles/images/event/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%88%E0%B8%B2%E0%B8%81%E0%B9%80%E0%B8%A5%E0%B8%B7%E0%B8%AD%E0%B8%94.png";
+    $arrPostData['messages'][2]['type'] = "image";
+    $arrPostData['messages'][2]['originalContentUrl'] = "https://www.futurepark.co.th/stocks/event/pic_20170911112918_th.jpg";
+    $arrPostData['messages'][2]['previewImageUrl'] = "https://www.futurepark.co.th/stocks/event/pic_20170911112918_th.jpg";
+    $arrPostData['messages'][3]['type'] = "text";
+    $arrPostData['messages'][3]['text'] = "แล้วมาเจอกันนะคะ ^^";
+
 }else{
   $arrPostData = array();
   $arrPostData['replyToken'] = $arrJson['events'][0]['replyToken'];
   $arrPostData['messages'][0]['type'] = "text";
-  $arrPostData['messages'][0]['text'] = "ฉันไม่เข้าใจคำสั่ง";
+  $arrPostData['messages'][0]['text'] = "อยากทราบข้อมูลต่างๆ ลองพิพม์ -help ดูสิ";
 }
 
 
