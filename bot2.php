@@ -40,7 +40,6 @@ if($arrJson['events'][0]['message']['text'] == "สวัสดี"){
     $arrPostData['messages'][0]['type'] = "image";
     $arrPostData['messages'][0]['originalContentUrl'] = "https://data.whicdn.com/images/165000912/large.jpg";
     $arrPostData['messages'][0]['previewImageUrl'] = "https://data.whicdn.com/images/165000912/large.jpg";
-    $arrPostData['replyToken'] = $arrJson['events'][1]['replyToken'];
     $arrPostData['messages'][1]['type'] = "text";
     $arrPostData['messages'][1]['text'] = "เป็นไง สวยละสิ!";
 }else if ($arrJson['events'][0]['message']['text'] == "เป็นไง") {
