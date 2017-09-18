@@ -3,12 +3,16 @@ $access_token = 'sIJ4G+8/3gh0q2ISi9WI1CGB8QwU57IzK+2N+Ni16/zzF6rHBTwOryDhV8aaXvk
 
 $url = 'https://api.line.me/v2/bot/message/push';
 $replyId = 'Uec872a16e2dea9e3551b8a6ff583f684';
+$messages = [
+    'type' => 'text',
+    'text' => "มีอะไรให้ช่วยไหม"
+];
 $data = [
     'to' => $replyId,
-    'messages' => [$messages,$messages2,$messages3],
+    'messages' => [$messages],
 ];
 $post = json_encode($data);
-$headers = array('Authorization: Bearer ' . $access_token);
+$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
