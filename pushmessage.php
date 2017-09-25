@@ -1,9 +1,4 @@
 <?php
-$objConnect = mysql_connect("https://notbutterfly.000webhostapp.com/","id2986482_sundae_linebot","sundae_linebot");
-$objDB = mysql_select_db("id2986482_sundae_linebot");
-mysql_query("SET NAMES UTF8");
-date_default_timezone_set("Asia/Bangkok");
-
 $access_token = 'sIJ4G+8/3gh0q2ISi9WI1CGB8QwU57IzK+2N+Ni16/zzF6rHBTwOryDhV8aaXvksMrqXa3//kU5t4PaJfMOD9HVisCHqPOa/1F9BSe0H8zlRYNXbK0YAMi29/+gbHfh2p9ed3PzskUKGzqIloikGGwdB04t89/1O/w1cDnyilFU=';
 
 // $url = 'https://api.line.me/v2/bot/message/push';
